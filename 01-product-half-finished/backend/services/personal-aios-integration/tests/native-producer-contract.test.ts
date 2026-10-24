@@ -1,7 +1,12 @@
-// Opt-in consumer contract against a REAL producer process built from the repo lock (audit R1).
-//   node integrations/hermes/verify-producer.mjs --source <hermes-agent clone> --keep <new dir>
-//   PAIOS_HERMES_REBUILD_DIR=<that dir> node --test tests/native-producer-contract.test.ts
-// The model is a local deterministic OpenAI-protocol stub: this proves wire/memory-permission contracts, not model semantics.
+// Opt-in consumer contract against a producer built from this checkout's lock.
+// From the repository root, install the checkout-owned producer and Python environment:
+//   bash ci/install.sh gateway
+// Then, from this Integration package directory, run:
+//   PAIOS_HERMES_REBUILD_DIR=../../../../.scratch/hermes-source \
+//   PAIOS_HERMES_PYTHON=../../../../.scratch/hermes-venv/bin/python \
+//     node --test tests/native-producer-contract.test.ts
+// Without the checkout-owned producer path, the test keeps its prerequisite skip. It uses a local deterministic
+// OpenAI-protocol stub to check wire and memory-permission contracts, not model semantics.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {spawn, spawnSync} from 'node:child_process';
