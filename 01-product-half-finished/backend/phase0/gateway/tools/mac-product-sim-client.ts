@@ -5,7 +5,7 @@
  *   node tools/mac-product-sim-client.ts --pairing <pairing file> --recipient-key <private JWK file> [--origin <url>] [--prompt TEXT] [--text-only] [--call] [--confirmation approve|deny] [--control <JSON file>] [--control-on-approval <JSON file>]
  *   Add --desktop <scratch> [--enrollment <phone-issued JSON file>] [--desktop-seconds 300] for a bounded Mac test host.
  *   Add --desktop-attachment <scratch file> [--desktop-via drag|paste] [--desktop-grant-seconds 86400]
- *   [--desktop-revoke-after 60] to rehearse a temporary grant; see tools/README.desktop-fixture.md.
+ *   [--desktop-revoke-after 60] to rehearse a temporary grant; see docs/desktop-simulator.md.
  *   Desktop PDF extraction requires an existing pdftotext executable; image/Word extraction is outside this synthetic host.
  *   Add --origin-state <file> for the owner origin migration rehearsal; --origin-connect <file> maps its TLS connections to isolated loopback fronts.
  */
