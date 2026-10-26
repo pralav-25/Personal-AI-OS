@@ -36,7 +36,7 @@ For a native Python or cross-runtime case, first use the environment paths assig
 
 ## Package commands
 
-These are the package's actual test entrypoints. Optional database, model and platform tests retain their prerequisite gates. Some small services share Gateway's development tools for **typechecking**; that does not change the test commands below.
+These are the package's actual test entrypoints. Optional database, model and platform tests retain their prerequisite gates. Context Engine, Connector Runtime and Realtime Core share Gateway's development tools for **typechecking**. Integration declares its own TypeScript and Node types; that does not change the test commands below.
 
 | Package / 目录（backend 内为相对路径） | Command after dependencies are installed / 测试命令 |
 | --- | --- |
